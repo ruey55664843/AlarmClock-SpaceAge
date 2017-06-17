@@ -162,6 +162,7 @@
      <Compile Include="Assets\_Scripts\ClickHandler.cs" />
      <Compile Include="Assets\_Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\_Scripts\DestroyByContact.cs" />
+     <Compile Include="Assets\_Scripts\DestroyByLaser.cs" />
      <Compile Include="Assets\_Scripts\DestroyByPlayerBoundary.cs" />
      <Compile Include="Assets\_Scripts\EnterAlarmButton.cs" />
      <Compile Include="Assets\_Scripts\EnterGameButton.cs" />
@@ -169,6 +170,7 @@
      <Compile Include="Assets\_Scripts\HammerParenting.cs" />
      <Compile Include="Assets\_Scripts\HourDown.cs" />
      <Compile Include="Assets\_Scripts\HourUp.cs" />
+     <Compile Include="Assets\_Scripts\LaserHandler.cs" />
      <Compile Include="Assets\_Scripts\MenuController.cs" />
      <Compile Include="Assets\_Scripts\MinuteDown.cs" />
      <Compile Include="Assets\_Scripts\MinuteUp.cs" />
