@@ -8,23 +8,27 @@ public class ClickHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 	private Animator hammerDown;
 	private LineRenderer laserline;
 	private GameObject camera;
+	private GameObject laserBegin;
 	private GameObject laserEnd;
 	public bool fire = false;
 	public Vector3 shootDirection;
+	public Vector3 rayOrigin;
 
 	// Use this for initialization
 	void Start () {
 		GameObject hammerObject = GameObject.FindGameObjectWithTag ("Hammer");
-		GameObject hammerTipObject = GameObject.FindGameObjectWithTag ("HammerTip");
+		GameObject laserLineObject = GameObject.FindGameObjectWithTag ("Laser");
+		GameObject laserBeginObject = GameObject.FindGameObjectWithTag ("HammerTip");
 		GameObject laserEndObject = GameObject.FindGameObjectWithTag ("LaserEnd");
 		GameObject cameraObject = GameObject.FindGameObjectWithTag ("MainCamera");
-		if (hammerObject != null && hammerTipObject != null)
+		if (hammerObject != null && laserLineObject != null)
 		{
 			hammerDown = hammerObject.GetComponent <Animator>();
 			camera = cameraObject;
-			laserline = hammerTipObject.GetComponent <LineRenderer> ();
-			laserEnd = laserEndObject;
+			laserline = laserLineObject.GetComponent <LineRenderer> ();
 			laserline.enabled = false;
+			laserBegin = laserBeginObject;
+			laserEnd = laserEndObject;
 			hammerDown.Play ("AxeUp");
 		}
 		if (hammerDown == null || laserline == null)
@@ -57,10 +61,11 @@ public class ClickHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 	IEnumerator FireLaser (){
 		laserline.enabled = true;
 		while (fire) {
+			rayOrigin = laserBegin.transform.position;
 			shootDirection = camera.transform.forward;
-			shootDirection = shootDirection * 100 - laserline.transform.position;
-			laserline.transform.forward = shootDirection;
-			laserEnd.transform.position = shootDirection;
+			shootDirection = shootDirection * 100 - rayOrigin;
+			laserBegin.transform.forward = shootDirection;
+			laserEnd.transform.position = shootDirection + rayOrigin;
 
 			yield return null;
 		}

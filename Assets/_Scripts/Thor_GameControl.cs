@@ -16,7 +16,7 @@ public class Thor_GameControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gameOver = false;
-		Ragnarok = true;
+		Ragnarok = false;
 		StartCoroutine (SpawnWaves ());
 		
 	}
