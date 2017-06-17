@@ -8,4 +8,7 @@ public class HammerParenting : MonoBehaviour {
 	void Start () {
 		transform.parent = Camera.main.transform;
 	}
+	void Update () {
+		
+	}
 }
