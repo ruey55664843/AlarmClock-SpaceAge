@@ -217,6 +217,7 @@
 'Assets/_Scripts/TextOutline.cs'
 'Assets/_Scripts/Thor_GameControl.cs'
 'Assets/_Scripts/UniverseBgmControl.cs'
+'Assets/_Scripts/VanishTimeout.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.dll'
