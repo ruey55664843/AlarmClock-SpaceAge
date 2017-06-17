@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{38AA6A0F-01D9-AEA7-F1E8-93CB2C2703B9}</ProjectGuid>
+    <ProjectGuid>{1BD1B81C-6C85-1303-CDF7-4E517B9EBF46}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -59,10 +59,12 @@
      <Compile Include="Assets\GoogleVR\Editor\GvrViewerEditor.cs" />
      <Compile Include="Assets\GoogleVR\Legacy\Editor\GvrGazeEditor.cs" />
      <Compile Include="Assets\GoogleVR\Legacy\Editor\StereoControllerEditor.cs" />
+     <Compile Include="Assets\LightningBolt\Editor\LightningBoltEditor.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\_Shaders\OutlinedShader.shader" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoInsideShader.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
+     <None Include="Assets\LightningBolt\Readme.txt" />
      <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
      <None Include="Assets\Plugins\Android\proguard-gvr.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
@@ -78,6 +80,7 @@
      <None Include="Assets\Plugins\Android\AndroidManifest-Cardboard.xml" />
      <None Include="Assets\GoogleVR\Legacy\Resources\SolidColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnityCompatibility.cginc" />
+     <None Include="Assets\Models\RunicStoneHammer\readme.txt" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoStereoShader.shader" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
@@ -140,7 +143,7 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Google.ProtocolBuffers">
- <HintPath>/Users/raytsai/NTU/VR/balance/Assets/Plugins/Google.ProtocolBuffers.dll</HintPath>
+ <HintPath>/Users/raytsai/NTU/VR/final/AlarmClock-SpaceAge/Assets/Plugins/Google.ProtocolBuffers.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -151,7 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{6BD509B9-8FA2-311F-8391-0EA0DF84016B}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{C33AFA42-13AC-C512-2637-DB0AF91B3066}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

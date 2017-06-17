@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6BD509B9-8FA2-311F-8391-0EA0DF84016B}</ProjectGuid>
+    <ProjectGuid>{C33AFA42-13AC-C512-2637-DB0AF91B3066}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -144,6 +144,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
      <Compile Include="Assets\ImmersvExample\Scripts\RadialCutoutMenu.cs" />
+     <Compile Include="Assets\LightningBolt\LightningBoltScript.cs" />
      <Compile Include="Assets\SpaceShooter\Scripts\Done_BGScroller.cs" />
      <Compile Include="Assets\SpaceShooter\Scripts\Done_DestroyByBoundary.cs" />
      <Compile Include="Assets\SpaceShooter\Scripts\Done_DestroyByContact.cs" />
@@ -158,14 +159,18 @@
      <Compile Include="Assets\_Scripts\AmPmAdjust.cs" />
      <Compile Include="Assets\_Scripts\BackToHomeButton.cs" />
      <Compile Include="Assets\_Scripts\BoardRender.cs" />
+     <Compile Include="Assets\_Scripts\ClickHandler.cs" />
      <Compile Include="Assets\_Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\_Scripts\DestroyByContact.cs" />
+     <Compile Include="Assets\_Scripts\DestroyByLaser.cs" />
      <Compile Include="Assets\_Scripts\DestroyByPlayerBoundary.cs" />
      <Compile Include="Assets\_Scripts\EnterAlarmButton.cs" />
      <Compile Include="Assets\_Scripts\EnterGameButton.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
+     <Compile Include="Assets\_Scripts\HammerParenting.cs" />
      <Compile Include="Assets\_Scripts\HourDown.cs" />
      <Compile Include="Assets\_Scripts\HourUp.cs" />
+     <Compile Include="Assets\_Scripts\LaserHandler.cs" />
      <Compile Include="Assets\_Scripts\MenuController.cs" />
      <Compile Include="Assets\_Scripts\MinuteDown.cs" />
      <Compile Include="Assets\_Scripts\MinuteUp.cs" />
@@ -174,11 +179,14 @@
      <Compile Include="Assets\_Scripts\RandomRotator.cs" />
      <Compile Include="Assets\_Scripts\RankingBoardRender.cs" />
      <Compile Include="Assets\_Scripts\TextOutline.cs" />
+     <Compile Include="Assets\_Scripts\Thor_GameControl.cs" />
      <Compile Include="Assets\_Scripts\UniverseBgmControl.cs" />
+     <Compile Include="Assets\_Scripts\VanishTimeout.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\_Shaders\OutlinedShader.shader" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoInsideShader.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
+     <None Include="Assets\LightningBolt\Readme.txt" />
      <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
      <None Include="Assets\Plugins\Android\proguard-gvr.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
@@ -194,6 +202,7 @@
      <None Include="Assets\Plugins\Android\AndroidManifest-Cardboard.xml" />
      <None Include="Assets\GoogleVR\Legacy\Resources\SolidColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnityCompatibility.cginc" />
+     <None Include="Assets\Models\RunicStoneHammer\readme.txt" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoStereoShader.shader" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
@@ -217,7 +226,7 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Google.ProtocolBuffers">
- <HintPath>/Users/raytsai/NTU/VR/balance/Assets/Plugins/Google.ProtocolBuffers.dll</HintPath>
+ <HintPath>/Users/raytsai/NTU/VR/final/AlarmClock-SpaceAge/Assets/Plugins/Google.ProtocolBuffers.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
