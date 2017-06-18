@@ -54,7 +54,7 @@ public class EnterGameButton : MonoBehaviour {
 				// Do something
 				//Debug.Log("BUTTON HAS BEEN SELECTED!");
 				source.Play ();
-				Application.LoadLevel ("Universe");
+				Application.LoadLevel ("Thor");
 				//MenuController.control.AddCoins(100);
 
 				// Disappear

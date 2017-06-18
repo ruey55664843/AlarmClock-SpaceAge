@@ -8,37 +8,42 @@ public class Thor_GameControl : MonoBehaviour {
 	public GameObject Goblin;
 	public bool gameOver;
 	public float volTh;
-
-	private bool Ragnarok;//private
+    public AudioClip thundersound;
+    
+    private bool Ragnarok;//private
 	private bool UltAvailable;
 	private int GoblinNum;
 	private int GolemNum;
 	private MicInput[] mic;
+    private AudioSource source;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		gameOver = false;
 		Ragnarok = false;
 		UltAvailable = true;
 		mic = Camera.main.GetComponents <MicInput> ();
 
 		StartCoroutine (SpawnWaves ());
-	}
+        source = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		if (mic[0].getLoudness() >= volTh && UltAvailable){
 			UltAvailable = false;
 			Ragnarok = true;
-			StartCoroutine (WaitForThunder ());
+            source.Play();
+            StartCoroutine (WaitForThunder ());
 		}
 	}
 
 	IEnumerator WaitForThunder (){
 		yield return new WaitForSeconds (5);
 		Ragnarok = false;
-		yield return new WaitForSeconds (25);
+        source.Stop();
+        yield return new WaitForSeconds (25);
 		UltAvailable = true;
 	}
 
