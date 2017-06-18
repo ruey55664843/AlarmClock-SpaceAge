@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class MicInput : MonoBehaviour {
 
-	public static float MicLoudness;
+	private float MicLoudness;
 	public Text volumeText;
-
 	private string _device;
+
+	public float getLoudness (){
+		return MicLoudness;
+	}
 
 	//mic initialization
 	void InitMic(){

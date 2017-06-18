@@ -6,12 +6,12 @@ public class VanishTimeout : MonoBehaviour {
 
 
 	public GameObject Minion;
+	public GameObject Thunder;
 	public int TimeOut;
-	public Animation anim;
-	public AnimationClip Anime_Death;
-	public bool Fire;
-	public Vector3 Ray_origin;
-	public Vector3 Ray_direction;
+	public float killsphere;
+	private Animation anim;
+	private Vector3 Ray_origin;
+	private Vector3 Ray_direction;
 	private ClickHandler clickHandler;
 
 	private Thor_GameControl gameController;
@@ -37,8 +37,9 @@ public class VanishTimeout : MonoBehaviour {
 	void Update () {
 		transform.LookAt(Camera.main.transform);
 		if (gameController.ThorUltimate ()) {
-			anim.Play();
-			Destroy (Minion);
+			Quaternion spawnRotation = Quaternion.identity;
+			GameObject spawnedHazard = Instantiate (Thunder, transform.position, spawnRotation);
+			StartCoroutine(Killed());
 		}
 		if (clickHandler.fire) {
 			Ray_origin = clickHandler.rayOrigin;
@@ -47,7 +48,7 @@ public class VanishTimeout : MonoBehaviour {
 			Ray_direction = Camera.main.transform.forward;
 			Vector3 vb = Ray_direction / Ray_direction.magnitude;
 			float dist = Vector3.Cross (va, vb).magnitude;
-			if (dist < 6.0f)
+			if (dist < killsphere)
 				StartCoroutine(Killed());
 		}
 	}
