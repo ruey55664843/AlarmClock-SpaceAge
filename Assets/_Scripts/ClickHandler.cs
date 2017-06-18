@@ -13,6 +13,8 @@ public class ClickHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 	public bool fire = false;
 	public Vector3 shootDirection;
 	public Vector3 rayOrigin;
+	public AudioClip lasersound;
+	private AudioSource source;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +37,7 @@ public class ClickHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 		{
 			Debug.Log ("GameObject initialize error");
 		}
+		source = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -60,6 +63,7 @@ public class ClickHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
 	IEnumerator FireLaser (){
 		laserline.enabled = true;
+		source.Play ();
 		while (fire) {
 			rayOrigin = laserBegin.transform.position;
 			shootDirection = camera.transform.forward;
@@ -69,6 +73,7 @@ public class ClickHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
 			yield return null;
 		}
+		source.Stop ();
 		laserline.enabled = false;
 	}
 }
