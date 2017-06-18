@@ -172,6 +172,7 @@
      <Compile Include="Assets\_Scripts\HourUp.cs" />
      <Compile Include="Assets\_Scripts\LaserHandler.cs" />
      <Compile Include="Assets\_Scripts\MenuController.cs" />
+     <Compile Include="Assets\_Scripts\MicInput.cs" />
      <Compile Include="Assets\_Scripts\MinuteDown.cs" />
      <Compile Include="Assets\_Scripts\MinuteUp.cs" />
      <Compile Include="Assets\_Scripts\ModeSwitch.cs" />
