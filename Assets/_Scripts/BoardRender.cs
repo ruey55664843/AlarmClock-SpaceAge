@@ -20,7 +20,6 @@ public class BoardRender : MonoBehaviour {
 	private int curVolume = 1;
 
 	void Start () {
-		coin = MenuController.control.coins;
 		coinText.text = "Coins: " + coin.ToString ();
 		source = GetComponent<AudioSource> ();
 		GameObject enterGameButtonObject = GameObject.FindGameObjectWithTag ("GameButton");

@@ -9,12 +9,10 @@ public class VanishTimeout : MonoBehaviour {
 	public GameObject Thunder;
 	public int TimeOut;
 	public float killsphere;
-	public Animation anim;
-	public AnimationClip Anime_Death;
-	public bool Fire;
-	public Vector3 Ray_origin;
-	public Vector3 Ray_direction;
-	//private GameObject Camera;
+	private Animation anim;
+	private Vector3 Ray_origin;
+	private Vector3 Ray_direction;
+	private ClickHandler clickHandler;
 
 	private Thor_GameControl gameController;
 
@@ -22,11 +20,11 @@ public class VanishTimeout : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animation>();
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
-		//GameObject cameraObject = GameObject.FindGameObjectWithTag ("MainCamera");
+		GameObject clickHandlerObject = GameObject.FindGameObjectWithTag ("Click");
 		if (gameControllerObject != null)
 		{
 			gameController = gameControllerObject.GetComponent <Thor_GameControl>();
-			//Camera = cameraObject;
+			clickHandler = clickHandlerObject.GetComponent <ClickHandler> ();
 		}
 		if (gameController == null)
 		{
@@ -43,7 +41,9 @@ public class VanishTimeout : MonoBehaviour {
 			GameObject spawnedHazard = Instantiate (Thunder, transform.position, spawnRotation);
 			StartCoroutine(Killed());
 		}
-		if (Fire) {
+		if (clickHandler.fire) {
+			Ray_origin = clickHandler.rayOrigin;
+			Ray_direction = clickHandler.shootDirection;
 			Vector3 va = transform.position - Ray_origin;
 			Ray_direction = Camera.main.transform.forward;
 			Vector3 vb = Ray_direction / Ray_direction.magnitude;

@@ -9,8 +9,6 @@ using System.IO;
 public class MenuController : MonoBehaviour {
 	public static MenuController control;
 	//public Text textCoins;
-
-	public int coins = 0;
 	public int hour = 0;
 	public int minute = 0;
 	public int amPm = 0;		// am=0, pm=1
@@ -46,10 +44,6 @@ public class MenuController : MonoBehaviour {
 	void OnDisable (){
 		Save ();
 	}
-		
-	public void AddCoins(int numCoins){
-		coins += numCoins;
-	}
 
 	public void Save ()
 	{
@@ -57,7 +51,6 @@ public class MenuController : MonoBehaviour {
 		FileStream file = File.Create (Application.persistentDataPath + "/playerInfo.dat");
 
 		PlayerData data = new PlayerData ();
-		data.coins = coins;
 		data.hour = hour;
 		data.minute = minute;
 		data.amPm = amPm;
@@ -78,7 +71,6 @@ public class MenuController : MonoBehaviour {
 			PlayerData data = (PlayerData)bf.Deserialize (file);
 			List<ShootRecord> shoorRecords = (List<ShootRecord>)bf.Deserialize (file);
 			file.Close ();
-			coins = data.coins;
 			hour = data.hour;
 			minute = data.minute;
 			amPm = data.amPm;
@@ -92,13 +84,13 @@ public class MenuController : MonoBehaviour {
 [Serializable]
 class PlayerData
 {
-	public int coins = 0;
 	public int hour = 0;
 	public int minute = 0;
 	public int amPm = 0;
 	public int gameMode = 0;
 	public bool ringed = false;
 	public List<ShootRecord> shootRecords = new List<ShootRecord> ();
+
 }
 
 [Serializable]

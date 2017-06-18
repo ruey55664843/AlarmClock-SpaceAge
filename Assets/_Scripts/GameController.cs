@@ -134,7 +134,6 @@ public class GameController : MonoBehaviour
 				yield return new WaitForSeconds (waveWait);
 			}
 		}
-		MenuController.control.AddCoins (score);
 
 		Application.LoadLevel ("Home");
 	}

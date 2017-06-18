@@ -46,23 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Elemental Free\Scripts\GE_ELF_Demo.cs" />
-     <Compile Include="Assets\GE Common Assets\GE Orbit Camera\Scripts\GE_OrbitCamera.cs" />
-     <Compile Include="Assets\GE Common Assets\GE Orbit Camera\Scripts\GE_OrbitCameraUI.cs" />
-     <Compile Include="Assets\GE Common Assets\GE Toggle Full Screen\Scripts\GE_ToggleFullScreenUI.cs" />
-     <Compile Include="Assets\GE Common Assets\Scripts\GE_UIResponder.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo00.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo01.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo02.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo03.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo04.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo05.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo06.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo07.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo08.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_DemoPlaySound.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_OpenOtherScene.cs" />
-     <Compile Include="Assets\GUI Animator\GUI Animator FREE\Demo Basic (CSharp)\Scripts\GUIAnimatorFREEDemo.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\GVRDemo\Teleport.cs" />
@@ -161,7 +144,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrUIHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
      <Compile Include="Assets\ImmersvExample\Scripts\RadialCutoutMenu.cs" />
-     <Compile Include="Assets\LightningBolt\LightningBoltScript.cs" />
+     <Compile Include="Assets\OdinSpeecj.cs" />
      <Compile Include="Assets\SpaceShooter\Scripts\Done_BGScroller.cs" />
      <Compile Include="Assets\SpaceShooter\Scripts\Done_DestroyByBoundary.cs" />
      <Compile Include="Assets\SpaceShooter\Scripts\Done_DestroyByContact.cs" />
@@ -193,12 +176,15 @@
      <Compile Include="Assets\YounGen Tech\Scripts\Application\OpenLink.cs" />
      <Compile Include="Assets\YounGen Tech\Scripts\Ownership\Owner.cs" />
      <Compile Include="Assets\YounGen Tech\Scripts\UI\Tooltip.cs" />
+     <Compile Include="Assets\_Prefabs\LightningBolt\LightningBoltScript.cs" />
      <Compile Include="Assets\_Scripts\AlarmSetting.cs" />
      <Compile Include="Assets\_Scripts\AmPmAdjust.cs" />
      <Compile Include="Assets\_Scripts\BackToHomeButton.cs" />
      <Compile Include="Assets\_Scripts\BoardRender.cs" />
+     <Compile Include="Assets\_Scripts\ClickHandler.cs" />
      <Compile Include="Assets\_Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\_Scripts\DestroyByContact.cs" />
+     <Compile Include="Assets\_Scripts\DestroyByLaser.cs" />
      <Compile Include="Assets\_Scripts\DestroyByPlayerBoundary.cs" />
      <Compile Include="Assets\_Scripts\EnterAlarmButton.cs" />
      <Compile Include="Assets\_Scripts\EnterGameButton.cs" />
@@ -206,22 +192,28 @@
      <Compile Include="Assets\_Scripts\HammerParenting.cs" />
      <Compile Include="Assets\_Scripts\HourDown.cs" />
      <Compile Include="Assets\_Scripts\HourUp.cs" />
+     <Compile Include="Assets\_Scripts\LaserHandler.cs" />
+     <Compile Include="Assets\_Scripts\LokiControl.cs" />
      <Compile Include="Assets\_Scripts\MenuController.cs" />
+     <Compile Include="Assets\_Scripts\MicInput.cs" />
      <Compile Include="Assets\_Scripts\MinuteDown.cs" />
      <Compile Include="Assets\_Scripts\MinuteUp.cs" />
      <Compile Include="Assets\_Scripts\ModeSwitch.cs" />
      <Compile Include="Assets\_Scripts\Mover.cs" />
      <Compile Include="Assets\_Scripts\RandomRotator.cs" />
      <Compile Include="Assets\_Scripts\RankingBoardRender.cs" />
+     <Compile Include="Assets\_Scripts\SifControl.cs" />
      <Compile Include="Assets\_Scripts\TextOutline.cs" />
      <Compile Include="Assets\_Scripts\Thor_GameControl.cs" />
      <Compile Include="Assets\_Scripts\UniverseBgmControl.cs" />
      <Compile Include="Assets\_Scripts\VanishTimeout.cs" />
+     <Compile Include="Assets\_Scripts\heimdellcontrol.cs" />
+     <Compile Include="Assets\_Scripts\odinspeech.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\_Shaders\OutlinedShader.shader" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoInsideShader.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
-     <None Include="Assets\LightningBolt\Readme.txt" />
+     <None Include="Assets\_Prefabs\LightningBolt\Readme.txt" />
      <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
      <None Include="Assets\Plugins\Android\proguard-gvr.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
@@ -231,13 +223,10 @@
      <None Include="Assets\Elemental Free\Readme.txt" />
      <None Include="Assets\GoogleVR\Demos\Shaders\GVRDemo\GVRDemoAmbientOcclusion.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTextureOverlay.shader" />
-     <None Include="Assets\GUI Animator\GUI Animator FREE\Readme.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest-Daydream.xml" />
      <None Include="Assets\GoogleVR\Demos\Shaders\GVRDemo\GVRDemoUnlitGrayscaleToColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
-     <None Include="Assets\GE Common Assets\Readme.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlay.shader" />
-     <None Include="Assets\GUI Animator\GUI Animator FREE\!How to.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest-Cardboard.xml" />
      <None Include="Assets\GoogleVR\Legacy\Resources\SolidColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnityCompatibility.cginc" />
@@ -263,12 +252,6 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
- </Reference>
- <Reference Include="GETween">
- <HintPath>/Users/fredcheng1/Downloads/AlarmClock-SpaceAge/Assets/GUI Animator/Common/Plugins/GETween.dll</HintPath>
- </Reference>
- <Reference Include="GUIAnimatorFREE">
- <HintPath>/Users/fredcheng1/Downloads/AlarmClock-SpaceAge/Assets/GUI Animator/GUI Animator FREE/Plugins/GUIAnimatorFREE.dll</HintPath>
  </Reference>
  <Reference Include="Google.ProtocolBuffers">
  <HintPath>/Users/fredcheng1/Downloads/AlarmClock-SpaceAge/Assets/Plugins/Google.ProtocolBuffers.dll</HintPath>
