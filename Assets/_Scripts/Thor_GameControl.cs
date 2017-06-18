@@ -7,8 +7,7 @@ public class Thor_GameControl : MonoBehaviour {
 	public GameObject IceGolem;
 	public GameObject Goblin;
 	public bool gameOver;
-
-	private bool Ragnarok;
+	public bool Ragnarok;
 	private int GoblinNum;
 	private int GolemNum;
 

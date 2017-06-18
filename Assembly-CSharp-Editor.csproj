@@ -59,27 +59,37 @@
      <Compile Include="Assets\GoogleVR\Editor\GvrViewerEditor.cs" />
      <Compile Include="Assets\GoogleVR\Legacy\Editor\GvrGazeEditor.cs" />
      <Compile Include="Assets\GoogleVR\Legacy\Editor\StereoControllerEditor.cs" />
+     <Compile Include="Assets\LightningBolt\Editor\LightningBoltEditor.cs" />
+     <Compile Include="Assets\YounGen Tech\Health Script\Editor\HealthInspector.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\_Shaders\OutlinedShader.shader" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoInsideShader.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
+     <None Include="Assets\LightningBolt\Readme.txt" />
      <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
      <None Include="Assets\Plugins\Android\proguard-gvr.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
      <None Include="Assets\GoogleVR\Demos\Environment\DemoEnvUnlitGrayscale.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
+     <None Include="Assets\Elemental Free\Readme.txt" />
      <None Include="Assets\GoogleVR\Demos\Shaders\GVRDemo\GVRDemoAmbientOcclusion.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTextureOverlay.shader" />
+     <None Include="Assets\GUI Animator\GUI Animator FREE\Readme.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest-Daydream.xml" />
      <None Include="Assets\GoogleVR\Demos\Shaders\GVRDemo\GVRDemoUnlitGrayscaleToColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
+     <None Include="Assets\GE Common Assets\Readme.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlay.shader" />
+     <None Include="Assets\GUI Animator\GUI Animator FREE\!How to.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest-Cardboard.xml" />
      <None Include="Assets\GoogleVR\Legacy\Resources\SolidColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnityCompatibility.cginc" />
      <None Include="Assets\Models\RunicStoneHammer\readme.txt" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoStereoShader.shader" />
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>/Users/fredcheng1/Downloads/AlarmClock-SpaceAge/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -133,6 +143,12 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="GETween">
+ <HintPath>/Users/fredcheng1/Downloads/AlarmClock-SpaceAge/Assets/GUI Animator/Common/Plugins/GETween.dll</HintPath>
+ </Reference>
+ <Reference Include="GUIAnimatorFREE">
+ <HintPath>/Users/fredcheng1/Downloads/AlarmClock-SpaceAge/Assets/GUI Animator/GUI Animator FREE/Plugins/GUIAnimatorFREE.dll</HintPath>
  </Reference>
  <Reference Include="Google.ProtocolBuffers">
  <HintPath>/Users/fredcheng1/Downloads/AlarmClock-SpaceAge/Assets/Plugins/Google.ProtocolBuffers.dll</HintPath>
