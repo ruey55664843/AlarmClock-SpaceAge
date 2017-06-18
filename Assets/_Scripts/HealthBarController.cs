@@ -15,14 +15,24 @@ public class HealthBarController : MonoBehaviour {
 	public GameObject g2;
 	public GameObject g3;
 
-	public float health;
+	//public float health;
+	private Thor_GameControl gameController;
 
 	void Start () {
 		UpdateHealthStatus (100f);
+		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
+		if (gameControllerObject != null)
+		{
+			gameController = gameControllerObject.GetComponent <Thor_GameControl>();
+		}
+		if (gameController == null)
+		{
+			Debug.Log ("Cannot find 'GameController' script");
+		}
 	}
 
 	void Update () {
-		UpdateHealthStatus (health);
+		UpdateHealthStatus (gameController.getHealth ());
 	}
 
 	void UpdateHealthStatus (float health){

@@ -203,7 +203,9 @@
      <Compile Include="Assets\_Scripts\RandomRotator.cs" />
      <Compile Include="Assets\_Scripts\RankingBoardRender.cs" />
      <Compile Include="Assets\_Scripts\TextOutline.cs" />
+     <Compile Include="Assets\_Scripts\Thor_DestroyByPlayerBoundary.cs" />
      <Compile Include="Assets\_Scripts\Thor_GameControl.cs" />
+     <Compile Include="Assets\_Scripts\Thor_Mover.cs" />
      <Compile Include="Assets\_Scripts\UniverseBgmControl.cs" />
      <Compile Include="Assets\_Scripts\VanishTimeout.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
