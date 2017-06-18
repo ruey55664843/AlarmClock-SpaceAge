@@ -181,6 +181,7 @@
      <Compile Include="Assets\_Scripts\BackToHomeButton.cs" />
      <Compile Include="Assets\_Scripts\BoardRender.cs" />
      <Compile Include="Assets\_Scripts\ClickHandler.cs" />
+     <Compile Include="Assets\_Scripts\CooldownBarController.cs" />
      <Compile Include="Assets\_Scripts\DestroyByBoundary.cs" />
      <Compile Include="Assets\_Scripts\DestroyByContact.cs" />
      <Compile Include="Assets\_Scripts\DestroyByLaser.cs" />
@@ -189,6 +190,7 @@
      <Compile Include="Assets\_Scripts\EnterGameButton.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\HammerParenting.cs" />
+     <Compile Include="Assets\_Scripts\HealthBarController.cs" />
      <Compile Include="Assets\_Scripts\HourDown.cs" />
      <Compile Include="Assets\_Scripts\HourUp.cs" />
      <Compile Include="Assets\_Scripts\LaserHandler.cs" />
