@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour {
 	public int minute = 0;
 	public int amPm = 0;		// am=0, pm=1
 	public bool ringed = false;
-	public int gameMode = 0;	//normal=0, extreme=1;
+	public int gameMode = 1;	//normal=0, extreme=1;
 	public List<ShootRecord> shootRecords = new List<ShootRecord> ();
 
 	public bool isRinging = false;

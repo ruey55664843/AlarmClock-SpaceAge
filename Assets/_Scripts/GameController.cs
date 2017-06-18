@@ -39,6 +39,7 @@ public class GameController : MonoBehaviour
 
 	void Start ()
 	{
+		MenuController.control.gameMode = 1; //fred unhealthy
 		gameStart = false;
 		gameOver = false;
 		gameText.text = "blow up";
@@ -169,8 +170,8 @@ public class GameController : MonoBehaviour
 				gameText.text = "Game";
 				overText.text = "Over";
 			}
-			MenuController.control.shootRecords.Add (new ShootRecord (today, recordTime));
-			MenuController.control.shootRecords.Sort ();
+			//MenuController.control.shootRecords.Add (new ShootRecord (today, recordTime));
+			//MenuController.control.shootRecords.Sort ();
 			//Debug.Log ("Date1: " + MenuController.control.shootRecords [1].date +"Time1: " + MenuController.control.shootRecords [1].time +"Count: " + MenuController.control.shootRecords.Count.ToString ());
 		}else{
 			gameText.text = "Game";

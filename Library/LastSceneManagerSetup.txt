@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Thor.unity
+- path: Assets/_Scenes/Home.unity
   isLoaded: 1
   isActive: 1

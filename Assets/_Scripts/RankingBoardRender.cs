@@ -26,15 +26,23 @@ public class RankingBoardRender : MonoBehaviour {
 		RenderRankings ();
 	}
 
+	void Update(){ //
+		if (MenuController.control.shootRecords.Count == 0) {
+			firstPlaceText.text = "";
+			secondPlaceText.text = "";
+			thirdPlaceText.text = "";
+		}
+	}
+
 	void RenderRankings (){
 		if (first != 0f) {
-			firstPlaceText.text = "1. " + first.ToString ("#.00") + " s.";
+			firstPlaceText.text = "1. " + first.ToString ("#.00") + " pts.";
 		}
 		if (second != 0f) {
-			secondPlaceText.text = "2. " + second.ToString ("#.00") + " s.";
+			secondPlaceText.text = "2. " + second.ToString ("#.00") + " pts.";
 		}
 		if (third != 0f) {
-			thirdPlaceText.text = "3. " + third.ToString ("#.00") + " s.";
+			thirdPlaceText.text = "3. " + third.ToString ("#.00") + " pts.";
 		}
 	}
 

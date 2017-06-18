@@ -194,6 +194,7 @@
      <Compile Include="Assets\_Scripts\HourDown.cs" />
      <Compile Include="Assets\_Scripts\HourUp.cs" />
      <Compile Include="Assets\_Scripts\LaserHandler.cs" />
+     <Compile Include="Assets\_Scripts\LokiControl.cs" />
      <Compile Include="Assets\_Scripts\MenuController.cs" />
      <Compile Include="Assets\_Scripts\MicInput.cs" />
      <Compile Include="Assets\_Scripts\MinuteDown.cs" />
@@ -202,12 +203,15 @@
      <Compile Include="Assets\_Scripts\Mover.cs" />
      <Compile Include="Assets\_Scripts\RandomRotator.cs" />
      <Compile Include="Assets\_Scripts\RankingBoardRender.cs" />
+     <Compile Include="Assets\_Scripts\SifControl.cs" />
      <Compile Include="Assets\_Scripts\TextOutline.cs" />
      <Compile Include="Assets\_Scripts\Thor_DestroyByPlayerBoundary.cs" />
      <Compile Include="Assets\_Scripts\Thor_GameControl.cs" />
      <Compile Include="Assets\_Scripts\Thor_Mover.cs" />
      <Compile Include="Assets\_Scripts\UniverseBgmControl.cs" />
      <Compile Include="Assets\_Scripts\VanishTimeout.cs" />
+     <Compile Include="Assets\_Scripts\heimdellcontrol.cs" />
+     <Compile Include="Assets\_Scripts\odinspeech.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\_Shaders\OutlinedShader.shader" />
      <None Include="Assets\GoogleVR\Demos\Shaders\VideoDemo\VideoDemoInsideShader.shader" />
