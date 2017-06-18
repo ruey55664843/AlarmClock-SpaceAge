@@ -51,7 +51,6 @@ public class ClickHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 		//Debug.Log ("pointer down!");
 		fire = true;
         StartCoroutine ("FireLaser");
-        //source.Play();
     }
 		
 	public void OnPointerUp(PointerEventData eventData)
