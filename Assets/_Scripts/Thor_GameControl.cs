@@ -9,14 +9,17 @@ public class Thor_GameControl : MonoBehaviour {
 	public GameObject Goblin;
 	public bool gameOver;
 	public float volTh;
+	public float guideWait;
+	public float countDownWait;
     public float waveWait;
     public float gameOverWait;
-    /*public Text gameText;
-    public Text scoreText;
-    public Text healthText;*/
+    public Text gameText;
+    public Text overText;
     public AudioClip thundersound;
+	public TextMesh scoreText;
     
-    private bool Ragnarok;//private
+	private bool gameStart;
+	private bool Ragnarok;
 	private bool UltAvailable;
 	private int GoblinNum;
 	private int GolemNum;
@@ -25,7 +28,7 @@ public class Thor_GameControl : MonoBehaviour {
     private int passScore = 100;
     private string today = System.DateTime.Now.Date.ToString();
     private float recordTime = 0f;
-    private bool timeOut = false;
+	private float gameTime = 10f;
     private bool death = false;
     private MicInput[] mic;
     private AudioSource source;
@@ -33,17 +36,19 @@ public class Thor_GameControl : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+		gameStart = false;
 		gameOver = false;
 		Ragnarok = false;
-		UltAvailable = true;
+		gameText.text = "kill";
+		overText.text = "goblins !";
 		mic = Camera.main.GetComponents <MicInput> ();
-
 		StartCoroutine (SpawnWaves ());
         source = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+		scoreText.text = "Score: " + score.ToString ();
 		if (mic[0].getLoudness() >= volTh && UltAvailable){
 			UltAvailable = false;
 			Ragnarok = true;
@@ -54,10 +59,7 @@ public class Thor_GameControl : MonoBehaviour {
             death = true;
             GameOver();
         }            
-        if (score >= passScore && !gameOver)
-            GameOver();
-        else if (recordTime >= 120 && !gameOver){
-            timeOut = true;
+        else if (recordTime >= gameTime && !gameOver){
             GameOver();
         }
         else if (!gameOver)
@@ -65,7 +67,7 @@ public class Thor_GameControl : MonoBehaviour {
     }
 
 	IEnumerator WaitForThunder (){
-		yield return new WaitForSeconds (5);
+		yield return new WaitForSeconds (3);
 		Ragnarok = false;
         source.Stop();
         yield return new WaitForSeconds (25);
@@ -77,6 +79,19 @@ public class Thor_GameControl : MonoBehaviour {
 	}
 
 	IEnumerator SpawnWaves (){
+		yield return new WaitForSeconds(guideWait);
+		gameText.text = "";
+		overText.text = "3";
+		yield return new WaitForSeconds(countDownWait);
+		overText.text = "2";
+		yield return new WaitForSeconds(countDownWait);
+		overText.text = "1";
+		yield return new WaitForSeconds(countDownWait);
+		overText.text = "";
+		recordTime = 0f;
+		gameStart = true;
+		UltAvailable = true;
+
 		GoblinNum = Random.Range (10, 15);
 		GolemNum = Random.Range (3, 5);
 		for (int times = 0; times <= 100; times++) {
@@ -115,34 +130,23 @@ public class Thor_GameControl : MonoBehaviour {
     public void AddScore(int newScoreValue)
     {
         score += newScoreValue;
-        UpdateScore();
     }
 
 	public void MinusHealth(float newHealthValue)
     {
         health -= newHealthValue;
-        UpdateHealth();
     }
 
 	public float getHealth (){
 		return health;
 	}
 
-    void UpdateScore()
-    {
-        //scoreText.text = "Score: " + score;
-    }
-
-    void UpdateHealth()
-    {
-        //healthText.text = "Health: " + health;
-    }
-
     public void GameOver()
     {
-        if (!timeOut && !death)
+        if (!death)
         {
-            //gameText.text = "Game Over";
+            gameText.text = "Game Over";
+			overText.text = "Congrats!";
 
             MenuController.control.shootRecords.Add(new ShootRecord(today, score));
             MenuController.control.shootRecords.Sort();
@@ -150,7 +154,8 @@ public class Thor_GameControl : MonoBehaviour {
         }
         else
         {
-            //gameText.text = "Game Failure";
+			gameText.text = "Game";
+			overText.text = "Failure";
         }
         gameOver = true;
     }

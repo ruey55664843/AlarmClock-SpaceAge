@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MicInput : MonoBehaviour {
 
 	private float MicLoudness;
-	public TextMesh volumeText;
+	//public TextMesh volumeText;
 	private string _device;
 	private int minFreq;
 	private int maxFreq;
@@ -18,7 +18,7 @@ public class MicInput : MonoBehaviour {
 	//mic initialization
 	void InitMic(){
 		if(_device == null) _device = Microphone.devices[0];
-		volumeText.text = "";
+		//volumeText.text = "";
 		//volumeText.text = _device;
 		Microphone.GetDeviceCaps(null, out minFreq, out maxFreq);
 		if(minFreq == 0 && maxFreq == 0)  
@@ -75,7 +75,7 @@ public class MicInput : MonoBehaviour {
 		// levelMax equals to the highest normalized value power 2, a small number because < 1
 		// pass the value to a static var so we can access it from anywhere
 		MicLoudness = LevelMax ();
-		volumeText.text = MicLoudness.ToString ();
+		//volumeText.text = MicLoudness.ToString ();
 	}
 
 	bool _isInitialized;
@@ -90,9 +90,9 @@ public class MicInput : MonoBehaviour {
 		if(Application.platform == RuntimePlatform.Android)
 			yield return Application.RequestUserAuthorization(UserAuthorization.Microphone);
 		if (Application.HasUserAuthorization(UserAuthorization.Microphone)) {
-			volumeText.text = "Has permission!";
+			//volumeText.text = "Has permission!";
 		} else {
-			volumeText.text = "No permission!";
+			//volumeText.text = "No permission!";
 		}
 		InitMic();
 		_isInitialized=true;
