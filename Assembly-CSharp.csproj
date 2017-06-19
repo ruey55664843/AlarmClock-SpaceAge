@@ -203,6 +203,7 @@
      <Compile Include="Assets\_Scripts\Mover.cs" />
      <Compile Include="Assets\_Scripts\RandomRotator.cs" />
      <Compile Include="Assets\_Scripts\RankingBoardRender.cs" />
+     <Compile Include="Assets\_Scripts\Rulebook.cs" />
      <Compile Include="Assets\_Scripts\SifControl.cs" />
      <Compile Include="Assets\_Scripts\TextOutline.cs" />
      <Compile Include="Assets\_Scripts\Thor_DestroyByPlayerBoundary.cs" />
