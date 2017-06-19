@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
 		UpdateScore ();
 		if (MenuController.control.gameMode == 1) {
 			extremeModeBoundary.SetActive (true);
-			passScore = 350;
+			passScore = 250;
 			countdown = countdownTense;
 			hazardCount = 6;
 			waveWait = 4f;
@@ -69,7 +69,7 @@ public class GameController : MonoBehaviour
 	{
 		if (score >= passScore && !gameOver) {
 			GameOver ();
-		} else if (recordTime >= 120 && !gameOver){
+		} else if (recordTime >= 60 && !gameOver){
 			timeOut = true;
 			GameOver ();
 		}else if (!gameOver){

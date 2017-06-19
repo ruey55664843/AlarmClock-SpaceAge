@@ -29,7 +29,7 @@ public class Thor_GameControl : MonoBehaviour {
     //private int passScore = 100;
     private string today = System.DateTime.Now.Date.ToString();
     private float recordTime = 0f;
-	private float gameTime = 120f;
+	private float gameTime = 60f;
     private bool death = false;
     private MicInput[] mic;
     private AudioSource source;
@@ -173,6 +173,8 @@ public class Thor_GameControl : MonoBehaviour {
         }
         else
         {
+			MenuController.control.shootRecords.Add(new ShootRecord(today, score));
+			MenuController.control.shootRecords.Sort();
 			gameText.text = "Game";
 			overText.text = "Failure";
         }
