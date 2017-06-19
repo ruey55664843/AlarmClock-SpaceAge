@@ -25,10 +25,11 @@ public class Thor_GameControl : MonoBehaviour {
 	private int GolemNum;
     private int score;
 	private float health = 100f;
-    private int passScore = 100;
+	private float cooldown = 100f;
+    //private int passScore = 100;
     private string today = System.DateTime.Now.Date.ToString();
     private float recordTime = 0f;
-	private float gameTime = 10f;
+	private float gameTime = 120f;
     private bool death = false;
     private MicInput[] mic;
     private AudioSource source;
@@ -67,10 +68,20 @@ public class Thor_GameControl : MonoBehaviour {
     }
 
 	IEnumerator WaitForThunder (){
+		cooldown = 0f;
 		yield return new WaitForSeconds (3);
 		Ragnarok = false;
         source.Stop();
-        yield return new WaitForSeconds (25);
+        yield return new WaitForSeconds (5);
+		cooldown = 20f;
+		yield return new WaitForSeconds (5);
+		cooldown = 40f;
+		yield return new WaitForSeconds (5);
+		cooldown = 60f;
+		yield return new WaitForSeconds (5);
+		cooldown = 80f;
+		yield return new WaitForSeconds (5);
+		cooldown = 100f;
 		UltAvailable = true;
 	}
 
@@ -139,6 +150,14 @@ public class Thor_GameControl : MonoBehaviour {
 
 	public float getHealth (){
 		return health;
+	}
+
+	public float getCooldown (){
+		return cooldown;
+	}
+
+	public bool gameIsStart (){
+		return gameStart;
 	}
 
     public void GameOver()
